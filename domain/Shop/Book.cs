@@ -4,11 +4,11 @@ namespace Shop
 {
     public class Book
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
 
         public string Title { get; set; }
 
-        public Book(Guid id, string title)
+        public Book(int id, string title)
         {
             Id = id;
             Title = title;
