@@ -13,7 +13,6 @@ namespace Shop
             Id = id;
             Title = title;
         }
-        
     }
 }
  
