@@ -6,6 +6,8 @@ namespace Shop
 {
     public interface IBookRepository
     {
-        List<Book> GetAllByTitle(string titlePart);
-    }
-}
+        List<Book> GetAllByTitleOrAuthor(string titleorAuthor); 
+
+        List<Book> GetAllByISBN (string isbn);
+    } 
+} 
