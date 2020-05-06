@@ -31,9 +31,17 @@ namespace Shop.Tests
         }
 
         [Fact]
-        public void IsIsbn_WithOkIsbn_ReturnTrue()
+        public void IsIsbn_With10Isbn_ReturnTrue()
         {
-            bool actual = Book.IsIsbn("ISBN 34567-52321");
+            bool actual = Book.IsIsbn("IsBn 345-673-523 2");
+
+            Assert.True(actual);
+        } 
+
+        [Fact]
+        public void IsIsbn_With13Isbn_ReturnTrue()
+        {
+            bool actual = Book.IsIsbn("IsBn 345-673-522 3320");
 
             Assert.True(actual);
         }

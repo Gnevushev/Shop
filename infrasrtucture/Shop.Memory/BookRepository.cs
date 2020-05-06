@@ -15,14 +15,14 @@ namespace Shop.Memory
 
         };
          
-        public List<Book> GetAllByTitleOrAuthor(string fioAuthorPart)
+        public List<Book> GetAllByTitleOrAuthor(string query)
         {
-            return books.Where(x => x.Title.Contains(fioAuthorPart)).ToList();
+            return books.Where(book => book.FIO_author.Contains(query) || book.Title.Contains(query)).ToList();
         }
 
-        public List<Book> GetAllByISBN(string titlePart)
+        public List<Book> GetAllByISBN(string isbn)
         {
-            return books.Where(x => x.Title.Contains(titlePart)).ToList();
+            return books.Where(book => book.Isbn == isbn).ToList();
         }
 
         
